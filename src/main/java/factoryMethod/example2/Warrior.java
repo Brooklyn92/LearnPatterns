@@ -1,8 +1,4 @@
-package factoryMethod.example2.generalizedConstructor;
-
-import factoryMethod.example2.Archer;
-import factoryMethod.example2.Horseman;
-import factoryMethod.example2.Infantryman;
+package factoryMethod.example2;
 
 public abstract class Warrior {
     public static Warrior createWarrior(int i) {
