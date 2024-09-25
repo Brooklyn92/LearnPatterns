@@ -5,9 +5,16 @@ public class DrinkMachine {
         DrinkCreator teaCreator = new TeaCreator();
         System.out.print(teaCreator.displayMessage());
         teaCreator.pourDrink();
+
         System.out.println();
+
         DrinkCreator coffeeCreator = new CoffeeCreator();
         System.out.print(coffeeCreator.displayMessage());
         coffeeCreator.pourDrink();
+
+        System.out.println();
+
+        System.out.print(coffeeCreator.displayMessage());
+        coffeeCreator.pourDrink(CoffeeTypes.AMERICANO);
     }
 }
