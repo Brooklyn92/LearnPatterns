@@ -1,20 +1,20 @@
-package observer.example1;
+package observer.example1.pt2;
 
-public class CurrentConditionsDisplay extends WeatherData implements Observer, DisplayElement {
+public class CurrentConditionsDisplay implements Observer, DisplayElement {
     private float temperature;
     private float humidity;
-    public Subject weatherData;
+    public WeatherData weatherData;
 
 
-    public CurrentConditionsDisplay(Subject weatherData) {
+    public CurrentConditionsDisplay(WeatherData weatherData) {
         this.weatherData = weatherData;
         weatherData.registerObserver(this);
     }
 
     @Override
-    public void update(float temp, float humidity, float pressure) {
-        this.temperature = temp;
-        this.humidity = humidity;
+    public void update() {
+        this.temperature = weatherData.getTemperature();
+        this.humidity = weatherData.getHumidity();
         display();
 
     }

@@ -1,7 +1,10 @@
-package observer.example1;
+package observer.example1.pt2;
+
+import lombok.Data;
 
 import java.util.ArrayList;
 
+@Data
 public class WeatherData implements Subject {
     private final ArrayList<Observer> observers;
     private float temperature;
@@ -26,7 +29,7 @@ public class WeatherData implements Subject {
     @Override
     public void notifyObserver() {
         for (Observer observer: observers) {
-            observer.update(temperature, humidity, pressure);
+            observer.update();
         }
     }
 
@@ -35,15 +38,6 @@ public class WeatherData implements Subject {
         this.humidity = humidity;
         this.pressure = pressure;
         measurementsChanged();
-    }
-
-    void getTemperature(){
-    }
-
-    void getHumidify() {
-    }
-
-    void getPressure() {
     }
 
     void measurementsChanged() {

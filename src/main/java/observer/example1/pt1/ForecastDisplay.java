@@ -1,6 +1,6 @@
-package observer.example1;
+package observer.example1.pt1;
 
-public class ThirdPartyDisplay implements Observer, DisplayElement {
+public class ForecastDisplay implements Observer, DisplayElement {
 
     @Override
     public void display() {

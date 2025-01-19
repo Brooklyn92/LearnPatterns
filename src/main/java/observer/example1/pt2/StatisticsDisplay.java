@@ -1,4 +1,4 @@
-package observer.example1;
+package observer.example1.pt2;
 
 public class StatisticsDisplay implements Observer, DisplayElement {
 
@@ -8,7 +8,7 @@ public class StatisticsDisplay implements Observer, DisplayElement {
     }
 
     @Override
-    public void update(float temp, float humidity, float pressure) {
+    public void update() {
 
     }
 }
